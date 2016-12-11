@@ -1,0 +1,85 @@
+function greenMessage {
+    echo -e "\\033[32;1m${@}\033[0m"
+}
+
+function magentaMessage {
+    echo -e "\\033[35;1m${@}\033[0m"
+}
+
+function redMessage {
+    echo -e "\\033[31;1m${@}\033[0m"
+}
+
+
+clear
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' =
+echo -e "TeamSpeak 3 Server Install Script"
+echo -e "© by Turtles"
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' =
+sleep 5
+clear
+greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+greenMessage "--------------------------------------- 0%"
+greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+sleep 1
+
+redMessage "1. Progamme werden installiert"
+apt-get update && apt-get upgrade
+apt-get install bzip2
+clear
+
+greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+greenMessage "~~~~~~-------------------------------- 10%"
+greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+sleep 1
+redMessage "2. Benutzer ts3 wird erstellt"
+sleep 5
+adduser ts3
+clear
+
+greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+greenMessage "~~~~~~~~~~~~~------------------------- 25%"
+greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+sleep 1
+redMessage "3. Erstelle Verzeichnisse und setze Rechte"
+sleep 5
+chown ts3 /home/ts3
+su ts3
+cd /home/ts3
+clear
+
+greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~------- 75%"
+greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+sleep 1
+redMessage "4. Lade Teamspeak 3 Server herunter"
+sleep 5
+wget http://dl.4players.de/ts/releases/3.0.13.6/teamspeak3-server_linux_amd64-3.0.13.6.tar.bz2
+tar xfvj teamspeak3-server_linux_amd64-3.0.13.6.tar.bz2
+clear
+sleep 1
+
+sleep 10
+clear
+greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 100%"
+greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+sleep 1
+
+sleep5
+redMessage "5. Starte den Teamspeak 3 Server"
+cd /home/ts3/teamspeak3-server_linux_amd64
+sleep 10
+
+clear
+redMessage "Achtung! Der Server startet nun!"
+sleep 5 
+./ts3server_startscript.sh start
+
+greenMessage "Mit dem Befehl cd home/ts3 && ./ts3server_startscript start kannst du deinen Teamspeak Server starten"
+magentaMessage "Mit dem Befehl cd home/ts3 && ./ts3server_startscript.sh stop kannst du deinen Teamspeak Server stoppen"
+greenMessage "Mit dem Crontab Eintrag @rebbot cd home/ts3 && ./ts3server_startscript start kannst du deinen Teamspeak Server in den Autostart packen"
+
+redMessage "Zum Verlassen drücke Strg + C"
+
+sleep 100
