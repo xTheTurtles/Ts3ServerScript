@@ -65,9 +65,8 @@ greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 100%"
 greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 sleep 1
-
-sleep5
 redMessage "5. Starte den Teamspeak 3 Server"
+sleep5
 cd teamspeak3-server_linux_amd64
 sleep 10
 
