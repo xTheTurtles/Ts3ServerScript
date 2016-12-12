@@ -18,9 +18,9 @@ echo -e "© by Turtles"
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' =
 sleep 5
 clear
-greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+greenMessage "=========================================="
 greenMessage "--------------------------------------- 0%"
-greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+greenMessage "=========================================="
 sleep 1
 
 redMessage "1. Progamme werden installiert"
@@ -28,17 +28,17 @@ apt-get update && apt-get upgrade
 apt-get install bzip2
 clear
 
-greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-greenMessage "~~~~~~-------------------------------- 10%"
-greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+greenMessage "=========================================="
+greenMessage "======-------------------------------- 10%"
+greenMessage "=========================================="
 sleep 1
 redMessage "2. Informationen werden verarbeitet"
 
 clear
 
-greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-greenMessage "~~~~~~~~~~~~~------------------------- 25%"
-greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+greenMessage "=========================================="
+greenMessage "=============------------------------- 25%"
+greenMessage "=========================================="
 sleep 1
 redMessage "3. Erstelle Verzeichnisse und setze Rechte"
 sleep 5
@@ -47,9 +47,9 @@ mkdir ts3
 cd /ts3
 clear
 
-greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~------- 75%"
-greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+greenMessage "=========================================="
+greenMessage "===============================------- 75%"
+greenMessage "=========================================="
 sleep 1
 redMessage "4. Lade Teamspeak 3 Server herunter"
 sleep 5
@@ -61,9 +61,9 @@ sleep 1
 
 sleep 10
 clear
-greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 100%"
-greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+greenMessage "=========================================="
+greenMessage "===================================== 100%"
+greenMessage "=========================================="
 sleep 1
 redMessage "5. Starte den Teamspeak 3 Server"
 sleep 10
