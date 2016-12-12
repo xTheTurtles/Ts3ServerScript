@@ -43,7 +43,6 @@ greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 sleep 1
 redMessage "3. Erstelle Verzeichnisse und setze Rechte"
 sleep 5
-chown ts3 /home/ts3
 su ts3
 cd
 clear
