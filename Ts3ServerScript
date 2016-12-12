@@ -35,6 +35,7 @@ sleep 1
 redMessage "2. Benutzer ts3 wird erstellt"
 sleep 5
 adduser ts3
+su ts3
 clear
 
 greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -43,7 +44,6 @@ greenMessage "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 sleep 1
 redMessage "3. Erstelle Verzeichnisse und setze Rechte"
 sleep 5
-su ts3
 cd
 clear
 
