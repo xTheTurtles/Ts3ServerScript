@@ -55,6 +55,7 @@ redMessage "4. Lade Teamspeak 3 Server herunter"
 sleep 5
 wget http://dl.4players.de/ts/releases/3.0.13.6/teamspeak3-server_linux_amd64-3.0.13.6.tar.bz2
 tar xfvj teamspeak3-server_linux_amd64-3.0.13.6.tar.bz2
+cd teamspeak3-server_linux_amd64
 clear
 sleep 1
 
@@ -67,7 +68,7 @@ sleep 1
 
 sleep5
 redMessage "5. Starte den Teamspeak 3 Server"
-cd /home/ts3/teamspeak3-server_linux_amd64
+cd teamspeak3-server_linux_amd64
 sleep 10
 
 clear
